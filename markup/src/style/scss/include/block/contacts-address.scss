@@ -1,0 +1,71 @@
+.contacts-address {
+  position: relative;
+  padding-left: 32px;
+
+  &:after {
+    background-image: url('/assets/images/gps-light.svg');
+    content: "";
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+
+  &.--light {
+    &:after {
+      width: 20px;
+      height: 27px;
+      background-image: url('/assets/images/gps.svg');
+    }
+
+    .contacts-address {
+      &-first {
+        color: $main-color;
+      }
+
+      &-second {
+        color: #7E7E7E;
+
+        .big {
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  &-first {
+    margin-top: 30px;
+    color: #D0FACE;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    .big {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      text-decoration: underline;
+    }
+  }
+
+  &-second {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.6);
+
+    .big {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      color: white;
+    }
+  }
+}

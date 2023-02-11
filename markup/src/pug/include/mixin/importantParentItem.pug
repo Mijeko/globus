@@ -1,0 +1,8 @@
+mixin importantParentItem(item)
+    .important-parent-list-item
+        a(href="/").important-parent-list-item__title=item.title
+        .important-parent-list-item__description!=item.description
+        .important-parent-gallery
+            each image,index in item.images
+                a(href=image.src data-lightbox="roadtrip")
+                    img(src=image.src).important-parent-gallery-item

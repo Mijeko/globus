@@ -1,0 +1,8 @@
+mixin moreNewsItem(item)
+    .more-news-item-wrapper.swiper-slide
+        .more-news-item
+            .more-news-item__image
+                img(src=item.image)
+            a(href="/detail_news.html").more-news-item__title=item.title
+            .more-news-item__descrption=item.description
+            a(href="/detail_news.html").more-news-item__view.btn-main Подробнее

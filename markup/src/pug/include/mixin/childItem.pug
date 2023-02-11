@@ -1,0 +1,9 @@
+mixin childItem(item)
+    .for-child-item-wrapper
+        .for-child-item
+            .for-child-item-content
+                .for-child-item-preview(data-fancybox href=item.link)
+                    img(src=item.prev)
+                .for-child-item-title=item.title
+                .for-child-item-description=item.text
+                .for-child-item-view.btn-main(data-fancybox href=item.link) Смотреть

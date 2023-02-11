@@ -1,0 +1,71 @@
+.for-child {
+  &-container {
+    margin-bottom: 100px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  &-item {
+    border-radius: 10px;
+    background-color: rgba(150, 150, 150, 0.15);
+
+    &-wrapper {
+      flex: 0 0 33%;
+      padding: 10px;
+    }
+
+    &-content {
+      width: 100%;
+      padding: 20px;
+    }
+
+    &-preview {
+      width: 100%;
+      margin-bottom: 20px;
+      position: relative;
+      cursor: pointer;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        width: 62px;
+        height: 62px;
+        background-image: url("/assets/images/play.svg");
+        content: "";
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+    }
+
+    &-description {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
+    &-view {
+      cursor: pointer;
+    }
+  }
+}

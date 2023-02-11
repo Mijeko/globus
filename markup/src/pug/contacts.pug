@@ -1,0 +1,60 @@
+extends include/layer
+
+include include/mixin/contactsLink
+
+block contents
+    .container
+        include include/block/breadcrumbs
+        h1.site-title Контакты
+        .contacts-container
+            .contact-block-container
+                div(class="contact-block --light")
+                    div(class="contact-block-item --phone")
+                        .contact-block-item__label Приемная
+                        a(href="tel:+73852423008").contact-block-item__link +7 (3852) 42-30-08
+                    div(class="contact-block-item --phone")
+                        .contact-block-item__label Производственный отдел
+                        a(href="tel:+73852423008").contact-block-item__link +7 (3852) 42-63-78
+                    div(class="contact-block-item --phone")
+                        .contact-block-item__label Бухгалтерия
+                        a(href="tel:+73852423008").contact-block-item__link +7 (3852) 47-20-39
+                    div(class="contact-block-item --email")
+                        .contact-block-item__label E-mail для обращения
+                        a(href="mailto:info@кшп-глобус.рф").contact-block-item__link info@кшп-глобус.рф
+                div(class="contacts-address --light")
+                    .contacts-address-first Столовая, кулинария,<br>администрация, склад<br><span class="big">г. Барнаул, 50 лет СССР, 29</span>
+                    .contacts-address-second Второй склад<br><span class="big">г. Барнаул, Глушкова, 48</span>
+            .contacts-map-container
+                .contacts-map
+                    script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A905e2330af59220818f94a17873c79846e726aadb40c4d84971d214434d60877&width=835&height=476&lang=ru_RU&scroll=true')
+        .contacts-requsites-container
+            .contacts-requsites
+                .contacts-title Наши реквизиты
+                .contacts-requsites-text
+                    p Наименование организации:
+                    p АО «КШП – Глобус»
+                    p ИНН: 2222071373
+                    p ОГРН: 1082222001762
+            .contacts-link-container
+                .contacts-title Полезные ссылки
+                .contacts-link-list
+                    -
+                        var usefulLinks = [
+                            {
+                                title: 'Комитет по образованию',
+                                image: '/assets/images/useful/1.png',
+                                href: 'https://www.google.com/',
+                            },
+                            {
+                                title: 'Администрация г. Барнаула',
+                                image: '/assets/images/useful/2.png',
+                                href: 'https://www.google.com/',
+                            },
+                            {
+                                title: 'Управление муниципальной собственностью',
+                                image: '/assets/images/useful/3.png',
+                                href: 'https://www.google.com/',
+                            },
+                        ]
+                    each usefulItem,index in usefulLinks
+                        +contactsLink(usefulItem)

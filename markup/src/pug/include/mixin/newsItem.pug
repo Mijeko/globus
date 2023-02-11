@@ -1,0 +1,10 @@
+mixin newsItem(item)
+    .news-list-item
+        .news-list-item-image
+            img(src=item.image)
+        .news-list-item-info
+            .news-list-item-info__date=item.time
+            a(href="/detail_news.html").news-list-item-info__title=item.title
+            .news-list-item-info__description=item.description
+        .news-list-item-action
+            a(href="/detail_news.html").news-list-item-action__view Прочитать

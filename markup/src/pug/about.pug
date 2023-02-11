@@ -1,0 +1,160 @@
+extends include/layer
+include include/mixin/companyHistoryItem
+include include/mixin/menuIndexItem
+
+block contents
+    .container
+        include include/block/breadcrumbs
+        .about-banner
+            .about-banner-text
+                p Работу в «Глобусе» я воспринимаю как некий жизненный этап, вызов. Когда-то я был под одну сторону процесса – разрабатывал концепции предприятий, обустраивал их. Теперь я по другую сторону, причем, ту, что находится в более уязвимом положении.
+                p Буду работать, пока буду полезен, и пока мне будет интересно. Мне хочется показать, что школьное питание - это не помойка, а хорошая часть детства. Оно может быть и полезным, и вкусным. Я хочу, чтобы ученики и их родители начали уважать труд поваров. У них тяжелая работа, которая оказалась обесценена.
+            .about-banner-sign
+                p Директор «КШП – Глобус»
+                p Косых Сергей Владимирович
+            .about-banner-image
+                img(src="/assets/images/director.png")
+        .company-history
+            .company-history-title История комбината<br>школьного питания «Глобус»
+            .company-history-mobile-list
+                -
+                    var companyHistoryLeft = [
+                        {
+                            title: '1998 г.',
+                            text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                            image: '/assets/images/company-history/1.png',
+                        },
+                        {
+                            title: '2011 г.',
+                            text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                            image: '/assets/images/company-history/2.png',
+                        },
+                        {
+                            title: '2021 г.',
+                            text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                            image: '/assets/images/company-history/3.png',
+                        },
+                    ]
+                each leftEl, index in companyHistoryLeft
+                    +companyHistoryItem(leftEl)
+                -
+                    var companyHistoryRight = [
+                        {
+                            title: '2001 г.',
+                            text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                            image: '/assets/images/company-history/4.png',
+                        },
+                        {
+                            title: '2016 г.',
+                            text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                            image: '/assets/images/company-history/5.png',
+                        },
+                    ]
+                each rightEl, index in companyHistoryRight
+                    +companyHistoryItem(rightEl)
+            .company-history-list
+                .company-history-list-side
+                    -
+                        var companyHistoryLeft = [
+                            {
+                                title: '1998 г.',
+                                text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                                image: '/assets/images/company-history/1.png',
+                            },
+                            {
+                                title: '2011 г.',
+                                text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                                image: '/assets/images/company-history/2.png',
+                            },
+                            {
+                                title: '2021 г.',
+                                text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                                image: '/assets/images/company-history/3.png',
+                            },
+                        ]
+                    each leftEl, index in companyHistoryLeft
+                        +companyHistoryItem(leftEl)
+                .company-history-list-side
+                    -
+                        var companyHistoryRight = [
+                            {
+                                title: '2001 г.',
+                                text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                                image: '/assets/images/company-history/4.png',
+                            },
+                            {
+                                title: '2016 г.',
+                                text: 'Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.',
+                                image: '/assets/images/company-history/5.png',
+                            },
+                        ]
+                    each rightEl, index in companyHistoryRight
+                        +companyHistoryItem(rightEl)
+        .page
+            .page-title Все наши направления
+            .page-text
+                p Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений. Приятно, граждане, наблюдать, как независимые государства подвергнуты целой серии независимых исследований.
+                p Однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.
+            .menu-index-list
+                -
+                    var menuIndexList = [
+                        {
+                            title: 'Меню для школ',
+                            image: '/assets/images/menu/index/1.png',
+                            href: '',
+                        },
+                        {
+                            title: 'Столовая Нива',
+                            image: '/assets/images/menu/index/1.png',
+                            href: '',
+                        },
+                        {
+                            title: 'Кулинария',
+                            image: '/assets/images/menu/index/2.png',
+                            href: '',
+                        },
+                    ];
+                each item,index in menuIndexList
+                    +menuIndexItem(item)
+        .page
+            .page-title Производство
+            .page-text
+                p Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений. Приятно, граждане, наблюдать, как независимые государства подвергнуты целой серии независимых исследований.
+                p Однозначно, как может показаться: понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений
+            .manufactory
+                .manufactory-item
+                    .manufactory-img
+                        img(src="/assets/images/manufactory/1.png")
+                .manufactory-item
+                    .manufactory-img
+                        img(src="/assets/images/manufactory/2.png")
+                .manufactory-item
+                    .manufactory-img
+                        img(src="/assets/images/manufactory/3.png")
+                .manufactory-item
+                    .manufactory-img
+                        img(src="/assets/images/manufactory/4.png")
+    .home-contacts-wrapper
+        .container
+            .home-contacts-title Контакты
+        .home-contacts-container.container
+            .home-contacts-contact-container
+                .home-contacts-contact
+                    .home-contacts-contact-item
+                        .home-contacts-contact-item__label Приемная
+                        a(href="tel:+73852423008").home-contacts-contact-item__link +7 (3852) 42-30-08
+                    .home-contacts-contact-item
+                        .home-contacts-contact-item__label Производственный отдел
+                        a(href="tel:+73852423008").home-contacts-contact-item__link +7 (3852) 42-63-78
+                    .home-contacts-contact-item
+                        .home-contacts-contact-item__label Бухгалтерия
+                        a(href="tel:+73852423008").home-contacts-contact-item__link +7 (3852) 47-20-39
+                    .home-contacts-contact-item
+                        .home-contacts-contact-item__label E-mail для обращения
+                        a(href="mailto:info@кшп-глобус.рф").home-contacts-contact-item__link info@кшп-глобус.рф
+                .home-contacts-address
+                    .home-contacts-address-first Столовая, кулинария,<br>администрация, склад<br><span class="big">г. Барнаул, 50 лет СССР, 29</span>
+                    .home-contacts-address-second Второй склад<br><span class="big">г. Барнаул, Глушкова, 48</span>
+            .home-contacts-map-container
+                .home-contacts-map
+                    img(src="/assets/images/map.png")

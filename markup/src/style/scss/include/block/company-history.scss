@@ -1,0 +1,131 @@
+.company-history {
+  margin-top: 100px;
+
+  &-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+  }
+
+  &-mobile {
+
+    &-list {
+      @media(min-width: 611px) {
+        display: none;
+      }
+
+      .company-history-list-item {
+        padding-top: 40px;
+
+        .company-history-list-item-content {
+          padding-top: 15px;
+          padding-left: 20px;
+          padding-right: 40px;
+        }
+
+        .company-history-list-item__title {
+          border-radius: 15px 0 0 15px;
+          padding-left: 20px;
+        }
+
+
+        &:nth-child(2n) {
+
+          .company-history-list-item-content {
+            padding-top: 15px;
+          }
+
+          .company-history-list-item__title {
+            border-radius: 0 15px 15px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 610px) {
+      display: none;
+    }
+
+
+    &-side {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @media (max-width: 610px) {
+        width: 100%;
+      }
+
+      &:nth-child(1) {
+        padding-top: 40px;
+        border-right: 1px solid $second-color;
+
+        .company-history-list-item-content {
+          padding-top: 15px;
+          padding-left: 20px;
+          padding-right: 40px;
+        }
+
+        .company-history-list-item__title {
+          border-radius: 15px 0 0 15px;
+          padding-left: 20px;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-top: 270px;
+
+        .company-history-list-item-content {
+          padding-top: 15px;
+          padding-left: 116px;
+        }
+
+        .company-history-list-item__title {
+          padding-left: 116px;
+          border-radius: 0 15px 15px 0;
+        }
+      }
+    }
+
+    &-item {
+      margin-bottom: 132px;
+
+      @media (max-width: 610px) {
+        margin-bottom: 30px;
+      }
+
+      &__title {
+        background: $block-normal-color;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: $main-color;
+      }
+
+      &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 410px;
+        padding-bottom: 15px;
+      }
+
+      &__img {
+        border-radius: 10px;
+        max-width: 407px;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

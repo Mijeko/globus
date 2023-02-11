@@ -1,0 +1,136 @@
+.more-news {
+  display: flex;
+
+  &-container {
+    margin-top: 60px;
+    margin-bottom: 100px;
+
+    @media (max-width: 1100px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-slider {
+
+    margin: 0 -10px;
+
+    @media (max-width: 1100px) {
+      padding-bottom: 20px;
+    }
+
+    .swiper-pagination {
+      bottom: 0;
+      top: unset;
+      height: 8px;
+
+      &-progressbar {
+        border-radius: 4px;
+
+        .swiper-pagination-progressbar-fill {
+          background: $main-color;
+        }
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    color: $main-color;
+
+    @media (max-width: 1100px) {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &-all-article {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $text-color;
+    text-decoration: underline;
+
+    @media (max-width: 1100px) {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &-item {
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #7E7E7E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media(max-width: 1100px) {
+      padding: 10px;
+    }
+
+    &-wrapper {
+      padding: 10px;
+
+
+      // disable when destroy swiper slider
+      @media (min-width: 1100px) {
+        flex-shrink: unset;
+      }
+    }
+
+    &__image {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: $text-color;
+      margin-top: 20px;
+      margin-bottom: 10px;
+
+      @media(max-width: 1100px) {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+    &__description {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: $text-color;
+
+      @media(max-width: 1100px) {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+    &__view {
+      padding: 10px 20px;
+      display: block;
+      margin: 20px auto auto auto;
+    }
+  }
+}

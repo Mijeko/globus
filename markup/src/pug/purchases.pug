@@ -1,0 +1,49 @@
+extends include/layer
+include include/mixin/menuCatalogItem
+block contents
+    .container
+        include include/block/breadcrumbs
+        h1.site-title Закупки
+        .menu-catalog-container
+            -
+                var menuCatalog = [
+                    {
+                        title: 'Приложения',
+                        childs: [
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                        ]
+                    },
+                    {
+                        title: 'Договор поставки',
+                        childs: [
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                        ]
+                    },
+                    {
+                        title: 'План закупок',
+                        childs: [
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                        ]
+                    },
+                    {
+                        title: 'Протоколы решений',
+                        childs: [
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                        ]
+                    },
+                ]
+            each elem, index in menuCatalog
+                +menuCatalogItem(elem)
+        include include/block/requirements

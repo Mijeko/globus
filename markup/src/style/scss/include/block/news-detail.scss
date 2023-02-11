@@ -1,0 +1,62 @@
+.news-detail {
+  &-image {
+    max-width: 834px;
+    width: 100%;
+    margin: 30px auto auto auto;
+  }
+
+  &-description {
+    h2 {
+
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: -0.02em;
+      margin: 20px 0;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    > div {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      > img {
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    ul {
+      margin-bottom: 30px;
+
+      li {
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        list-style-type: none;
+        position: relative;
+        padding-left: 35px;
+        margin: 10px 0;
+
+        &:before {
+          background: url("/assets/images/cook.svg");
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          display: block;
+          content: "";
+        }
+      }
+    }
+  }
+}

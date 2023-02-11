@@ -1,0 +1,47 @@
+.btn {
+  &-main {
+    text-decoration: none !important;
+    transition: 0.2s ease all;
+
+    background-color: $main-color;
+    border-radius: $border-radius-button;
+    border: 1px $main-color solid;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    text-align: center;
+
+    @media(max-width: 810px) {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    &:hover {
+      background-color: $second-color;
+      color: $text-color;
+      border-color: transparent;
+    }
+  }
+
+  &-light {
+    @extend .btn-main;
+    background-color: white;
+    color: $main-color;
+
+    &:hover {
+      background-color: $second-color;
+      color: white;
+    }
+  }
+
+  &-filled {
+    @extend .btn-main;
+    border-color: transparent;
+    background-color: $second-color;
+    color: white;
+  }
+}

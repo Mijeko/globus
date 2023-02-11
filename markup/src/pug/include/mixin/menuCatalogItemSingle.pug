@@ -1,0 +1,8 @@
+mixin menuCatalogItemSingle(item)
+    .menu-catalog-item-wrapper
+        .menu-catalog-item
+            .menu-catalog-item__date
+                span Дата:
+                | 15.12.2022
+            a(href=item.image data-lightbox="image-1" data-title="My caption")
+                img(src=item.image).menu-catalog-item__image

@@ -1,0 +1,41 @@
+.breadcrumbs {
+  display: flex;
+  margin-bottom: 30px;
+
+  &-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-color;
+    position: relative;
+    text-decoration: underline;
+
+    &:not(:first-child) {
+      padding-left: 15px;
+      margin-left: 5px;
+
+      &:after {
+        width: 10px;
+        height: 10px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        content: "";
+        display: block;
+        position: absolute;
+        background-image: url("/assets/images/arrow.svg");
+      }
+    }
+
+    &.active {
+      text-decoration: none;
+      color: $text-color;
+      opacity: 0.6;
+    }
+  }
+
+  &-link {
+    color: inherit;
+  }
+}

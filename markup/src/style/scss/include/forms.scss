@@ -1,0 +1,207 @@
+.common-form {
+  width: 100%;
+
+  &-container {
+    width: 100%;
+    color: $text-color;
+    padding: 40px;
+  }
+
+  &-row {
+    width: 100%;
+
+    &.grouped {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @media(max-width: 810px) {
+        flex-direction: column;
+      }
+    }
+
+    &.center {
+      align-items: center;
+    }
+  }
+
+  &-element {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 10px;
+
+    &.radio {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+    }
+
+    &.file {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+
+      label {
+        position: relative;
+        padding-left: 35px;
+        border-bottom: 1px solid #222;
+        padding-bottom: 5px;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: -10px;
+          bottom: 0;
+          margin: auto;
+          width: 25px;
+          height: 25px;
+          background: url("/assets/images/download_file.png");
+        }
+
+        & + input {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-input {
+    border-radius: 22px;
+    padding: 10px 20px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $text-color;
+    outline: none;
+    border: 1px solid transparent;
+
+    @media (max-width: 810px) {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 128.52%;
+    }
+
+    &::placeholder {
+      opacity: 1;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: $text-color;
+
+      @media (max-width: 810px) {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 128.52%;
+      }
+    }
+  }
+
+  &-textarea {
+    width: 100%;
+    border-radius: 22px;
+    padding: 10px 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $text-color;
+    outline: none;
+    border: 1px solid transparent;
+    resize: none;
+
+    @media (max-width: 810px) {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 128.52%;
+    }
+
+    &::placeholder {
+      opacity: 1;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: $text-color;
+
+      @media (max-width: 810px) {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 128.52%;
+      }
+    }
+  }
+
+  &-agree {
+    padding: 0 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 129%;
+    max-width: 320px;
+
+    a {
+      text-decoration: underline;
+      color: $main-color;
+    }
+  }
+
+  &-submit {
+    padding: 15px 40px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media(max-width: 810px) {
+      padding: 10px 20px;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 128.52%;
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.vacancy-form {
+  &-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    color: $main-color;
+    letter-spacing: -0.02em;
+    margin: 0 auto 20px 0;
+    text-align: center;
+  }
+
+  .common-form-input, .common-form-textarea {
+    border-color: #368733;
+  }
+
+  .common-form-element.file {
+    margin-left: 12px;
+    margin-bottom: 35px;
+  }
+
+  .common-form-submit {
+    padding: 15px 45px;
+  }
+
+  .common-form-agree {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 129%;
+    letter-spacing: 0.01em;
+    max-width: 424px;
+    padding: 18px 0;
+  }
+}

@@ -1,0 +1,95 @@
+.vacancy {
+  &-marks {
+    margin-bottom: 20px;
+
+    &-title {
+
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 128%;
+      color: $main-color;
+    }
+
+    &-item {
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      list-style-type: none;
+      position: relative;
+      padding-left: 35px;
+      margin: 10px 0;
+
+      &:before {
+        background: url("/assets/images/cook.svg");
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        display: block;
+        content: "";
+      }
+    }
+  }
+
+  &-list {
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+
+  }
+
+  &-item {
+    padding: 40px 30px;
+    border: 1px $main-color solid;
+    border-radius: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 128.52%;
+      text-transform: uppercase;
+      color: $main-color;
+    }
+
+    &__money {
+
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 120%;
+      letter-spacing: 0.01em;
+      padding: 20px 0;
+    }
+
+    &__description {
+
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 128.52%;
+      letter-spacing: 0.01em;
+      padding-bottom: 20px;
+    }
+
+    &-actions {
+      display: flex;
+      justify-content: flex-end;
+
+      &-item {
+        padding: 15px 25px;
+        cursor: pointer;
+
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

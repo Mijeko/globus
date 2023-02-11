@@ -1,0 +1,13 @@
+.logo {
+  &-container {
+    margin-left: -100px;
+
+
+    img {
+      @media (max-width: 1263px) {
+        max-width: 200px;
+        object-fit: contain;
+      }
+    }
+  }
+}

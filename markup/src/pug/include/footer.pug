@@ -1,0 +1,53 @@
+include mixin/footerMenuItem
+
+.footer-wrapper
+    footer.footer.container
+        .footer-row
+            .footer-logo
+                img(src="/assets/images/logo-light.svg").footer-logo-image
+            .footer-menu
+                -
+                    var menu = [
+                        {
+                            title: 'Главная',
+                            href: '/',
+                            activeClass: 'active',
+                        },
+                        {
+                            title: 'Новости',
+                            href: '/',
+                            activeClass: '',
+                        },
+                        {
+                            title: 'О комбинате',
+                            href: '/',
+                            activeClass: '',
+                        },
+                        {
+                            title: 'Меню',
+                            href: '/',
+                            activeClass: '',
+                        },
+                        {
+                            title: 'Услуги',
+                            href: '/',
+                            activeClass: '',
+                        },
+                        {
+                            title: 'Закупки',
+                            href: '/',
+                            activeClass: '',
+                        },
+                        {
+                            title: 'Документы',
+                            href: '/',
+                            activeClass: '',
+                        },
+                        {
+                            title: 'Вакансии',
+                            href: '/',
+                            activeClass: '',
+                        },
+                    ]
+                each item,index in menu
+                    +footerMenuItem(item)

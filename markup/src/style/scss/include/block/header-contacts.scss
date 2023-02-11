@@ -1,0 +1,33 @@
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+
+  &-link {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: $text-color;
+    padding-left: 35px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      display: block;
+      width: 30px;
+      height: 25px;
+      background-image: url("/assets/images/phone.svg");
+    }
+
+    @media (max-width: 1263px) {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}

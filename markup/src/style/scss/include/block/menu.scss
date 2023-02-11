@@ -1,0 +1,48 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 15px 0;
+  margin: 0 -3px;
+
+  @media (max-width: 810px) {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  &-item {
+    &-wrapper {
+      padding: 3px;
+      max-width: 156px;
+      width: 100%;
+    }
+
+    background-color: $block-normal-color;
+    color: $text-color;
+    border-radius: 6px;
+    padding: 17px 5px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: block;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+
+    &.active, &:active {
+      background-color: $block-active-color;
+      color: white;
+    }
+
+    &:hover {
+      background-color: $block-hover-color;
+      color: $text-color;
+    }
+
+    @media(max-width: 810px) {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      padding: 10px 5px;
+    }
+  }
+}

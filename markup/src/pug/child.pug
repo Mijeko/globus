@@ -1,0 +1,98 @@
+extends include/layer
+include include/mixin/childItem
+block contents
+    .container
+        include include/block/breadcrumbs
+        h1.site-title Детям
+        .for-child-container
+            .for-child-list
+                -
+                    var media = [
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                        {
+                            title: 'Мультфильм о веселой панде',
+                            text: 'Наше дело не так однозначно, как может технологий представляет собой интерес эксперимент проверки.',
+                            prev: '/assets/images/child_prev.png',
+                            link: 'https://www.youtube.com/watch?v=MRNGw08i6S4',
+                        },
+                    ];
+                each item,index in media
+                    +childItem(item)
+            include include/block/pagination

@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.2s ease all;
+
+  &:hover {
+    text-decoration: none;
+    color: $second-color;
+  }
+
+  &:active {
+    text-decoration: none;
+    color: $second-color-active;
+  }
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', 'sans-serif';
+  font-style: normal;
+}
+
+body {
+  color: $text-color;
+  background-image: url("/assets/images/bckg_desk.png");
+}
+
+.main-content {
+  flex: 1 1 auto;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1263px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (max-width: 1263px) {
+    padding: 0 10px;
+  }
+}
+
+h1.site-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+}
+
+.fancybox__content {
+  padding: 0;
+}
+
+.common-modal {
+  width: 820px;
+  padding: 36px;
+  //background: wheat;
+  background: linear-gradient(333.38deg, #E0F89D -6.68%, rgba(224, 248, 157, 0) 63.71%), #FFFFFF;
+}

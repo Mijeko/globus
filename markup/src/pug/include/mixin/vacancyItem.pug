@@ -1,0 +1,24 @@
+mixin vacancyItem(item)
+    .vacancy-item
+        .vacancy-item__title=item.name
+        .vacancy-item__money=item.money
+        .vacancy-item__description!=item.description
+        if(item.required)
+            .vacancy-marks-title Обязанности
+            .vacancy-marks
+                each req, index in item.required
+                    .vacancy-marks-item=req
+        .collapse#collapseExample
+            if(item.requirements)
+                .vacancy-marks-title Требования
+                .vacancy-marks
+                    each requirement, index in item.requirements
+                        .vacancy-marks-item=requirement
+            if(item.rules)
+                .vacancy-marks-title Условия
+                .vacancy-marks
+                    each rule, index in item.rules
+                        .vacancy-marks-item=rule
+        .vacancy-item-actions
+            .vacancy-item-actions-item.btn-light(data-toggle="collapse" data-target="#collapseExample") Подробнее
+            .vacancy-item-actions-item.btn-main(data-fancybox, data-src="modal.html" data-type="ajax") Откликнуться

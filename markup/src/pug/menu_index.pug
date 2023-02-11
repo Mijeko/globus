@@ -1,0 +1,29 @@
+extends include/layer
+
+include include/mixin/menuIndexItem
+
+block contents
+    .container
+        include include/block/breadcrumbs
+        h1.site-title Меню
+        .menu-index-list
+            -
+                var menuIndexList = [
+                    {
+                        title: 'Меню для школ',
+                        image: '/assets/images/menu/index/1.png',
+                        href: '',
+                    },
+                    {
+                        title: 'Меню для лагерей<br>(сезонное)',
+                        image: '/assets/images/menu/index/2.png',
+                        href: '',
+                    },
+                    {
+                        title: 'Рецепты',
+                        image: '/assets/images/menu/index/3.png',
+                        href: '',
+                    },
+                ];
+            each item,index in menuIndexList
+                +menuIndexItem(item)

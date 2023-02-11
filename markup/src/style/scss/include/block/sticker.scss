@@ -1,0 +1,35 @@
+.sticker {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 90px;
+
+  @media(max-width: 810px) {
+    margin-top: 30px;
+  }
+
+  &-image {
+    @keyframes scroll {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(-100%, 0);
+      }
+    }
+
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 30s infinite linear;
+    background-image: url("/assets/images/sticker.png");
+    background-size: 100% 100%;
+    height: 70px;
+    margin-left: -5px;
+
+    @media(max-width: 810px) {
+      height: 40px;
+    }
+  }
+}

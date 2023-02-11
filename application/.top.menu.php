@@ -1,0 +1,60 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О комбинате", 
+		"/about/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Меню", 
+		"/menu/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Услуги", 
+		"/services/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Закупки", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Документы", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Вакансии", 
+		"/vacancy/",
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

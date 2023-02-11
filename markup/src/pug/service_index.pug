@@ -1,0 +1,22 @@
+extends include/layer
+include include/mixin/menuIndexItem
+block contents
+    .container
+        include include/block/breadcrumbs
+        h1.site-title Услуги
+        .menu-index-list
+            -
+                var menuIndexList = [
+                    {
+                        title: 'Столовая Нива',
+                        image: '/assets/images/menu/index/1.png',
+                        href: '',
+                    },
+                    {
+                        title: 'Кулинария',
+                        image: '/assets/images/menu/index/2.png',
+                        href: '',
+                    },
+                ];
+            each item,index in menuIndexList
+                +menuIndexItem(item)

@@ -1,0 +1,95 @@
+.contragents {
+  margin-top: 100px;
+
+  @media (max-width: 810px) {
+    margin-top: 50px;
+    padding: 0 10px;
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
+    letter-spacing: -0.02em;
+    color: $text-color;
+
+    @media (max-width: 810px) {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &-filter {
+    display: flex;
+    margin: 30px 0;
+
+    @media (max-width: 810px) {
+      margin: 10px 0 20px 0;
+    }
+
+    &-item {
+      cursor: pointer;
+      border-radius: 20px;
+      border: 1px transparent solid;
+      transition: 0.2s ease all;
+      padding: 10px 20px 10px 40px;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      position: relative;
+
+      @media (max-width: 810px) {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      &:before {
+        width: 23px;
+        height: 23px;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        content: "";
+        display: block;
+        position: absolute;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &.school {
+        border-color: #7875FF;
+        background-color: #7875FF;
+
+        &:before {
+          background-image: url("/assets/images/books.svg");
+        }
+
+        &:hover, &.active {
+          background-color: #7875FF;
+          color: white;
+        }
+      }
+
+      &.camp {
+        border-color: #FF7575;
+        background-color: #FF7575;
+
+        &:before {
+          background-image: url("/assets/images/camping.svg");
+        }
+
+        &:hover, &.active {
+          background-color: #FF7575;
+          color: white;
+        }
+      }
+    }
+  }
+}

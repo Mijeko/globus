@@ -1,0 +1,73 @@
+@import "modules/init";
+@import "include/variables";
+@import "include/buttons";
+@import "include/common";
+@import "include/fonts";
+@import "include/forms";
+@import "include/over";
+
+@import "include/block/custom_radio";
+
+// шапка
+@import "include/block/upper-header";
+@import "include/block/header";
+@import "include/block/header-address";
+@import "include/block/header-contacts";
+@import "include/block/logo";
+@import "include/block/hamburger";
+
+// Меню
+@import "include/block/menu";
+
+// Хлебные крошки
+@import "include/block/breadcrumbs";
+
+// Пагинация
+@import "include/block/pagination";
+
+// Главная
+@import "include/block/home-slider";
+@import "include/block/home-short-phrase";
+@import "include/block/home-statistic";
+@import "include/block/important-parent";
+@import "include/block/eat-slider";
+@import "include/block/common-info";
+@import "include/block/sticker";
+@import "include/block/dialog-us";
+@import "include/block/contragents";
+@import "include/block/home-about";
+@import "include/block/jelly-slider";
+@import "include/block/home-contacts";
+@import "include/block/contact-block";
+@import "include/block/contacts-address";
+
+// новости
+@import "include/block/news";
+@import "include/block/news-detail";
+@import "include/block/more-news";
+
+// Меню
+@import "include/block/menu-catalog";
+@import "include/block/requirements";
+
+// Подвал
+@import "include/block/footer";
+@import "include/block/footer-menu";
+
+// Меню
+@import "include/block/menu-index";
+
+// Вакансии
+@import "include/block/vacancy";
+
+// О комбинате
+@import "include/block/about";
+@import "include/block/company-history";
+@import "include/block/page";
+@import "include/block/manufactory";
+
+// Детям
+@import "include/block/for-child";
+
+// Контакты
+@import "include/block/contacts";

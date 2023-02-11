@@ -1,0 +1,40 @@
+extends include/layer
+include include/mixin/menuCatalogItem
+block contents
+    .container
+        include include/block/breadcrumbs
+        h1.site-title Меню для школ
+        .menu-catalog-container
+            -
+                var menuCatalog = [
+                    {
+                        title: 'Младшие классы (1-4 класс)',
+                        childs: [
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                        ]
+                    },
+                    {
+                        title: 'Старшие классы (5-11 класс)',
+                        childs: [
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                        ]
+                    },
+                    {
+                        title: 'Кадетские школы (меню полного дня)',
+                        childs: [
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                            {image: '/assets/images/catalog/1.png'},
+                        ]
+                    },
+                ]
+            each elem, index in menuCatalog
+                +menuCatalogItem(elem)
+        include include/block/requirements

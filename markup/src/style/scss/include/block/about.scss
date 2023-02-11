@@ -1,0 +1,143 @@
+.about {
+  &-banner {
+    background-image: url("/assets/images/about_banner_bckg.png");
+    margin-top: 110px;
+    padding: 76px 103px 190px 130px;
+    position: relative;
+
+    @media (max-width: 910px) {
+      padding: 73px 20px;
+      background-size: 100% 100%;
+    }
+
+    @media(max-width: 910px) {
+      margin-top: 0;
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      max-width: 706px;
+      position: relative;
+
+      &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 90px;
+        height: 90px;
+      }
+
+      &:before {
+        left: -90px;
+        top: -30px;
+        background-image: url("/assets/images/66.svg");
+
+        @media (max-width: 910px) {
+          left: -10px;
+          top: -75px;
+        }
+      }
+
+      &:after {
+        right: -70px;
+        bottom: -110px;
+        background-image: url("/assets/images/99.svg");
+
+        @media (max-width: 910px) {
+          right: -10px;
+          bottom: -90px;
+        }
+
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-sign {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      color: $main-color;
+      position: absolute;
+      max-width: 350px;
+      width: 100%;
+      bottom: 10%;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      @media (max-width: 610px) {
+        max-width: 150px;
+        bottom: unset;
+        left: 15px;
+        right: 0;
+        top: 75%;
+        margin: 0;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+      }
+
+      @media (max-width: 910px) {
+        bottom: unset;
+        left: 65px;
+        right: 0;
+        top: 75%;
+        margin: 0;
+      }
+
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        content: url("/assets/images/sign.png");
+        width: 100px;
+        height: 100px;
+        display: block;
+
+        @media (max-width: 610px) {
+          right: 30px;
+          bottom: -100px;
+          z-index: 99;
+        }
+
+        @media (max-width: 910px) {
+          right: 100px;
+          bottom: -100px;
+        }
+      }
+
+      p {
+        margin-bottom: 5px;
+
+        @media (max-width: 910px) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      @media (max-width: 910px) {
+        position: relative;
+        right: unset;
+        bottom: unset;
+
+        img {
+          margin-left: auto;
+          display: block;
+        }
+      }
+    }
+  }
+}

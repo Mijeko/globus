@@ -1,0 +1,37 @@
+.upper-header {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 0;
+
+  @media (max-width: 1263px) {
+    padding: 20px 10px;
+  }
+
+  &-wrapper {
+    border-bottom: 1px #7E7E7E solid;
+
+    @media (max-width: 810px) {
+      display: none;
+    }
+  }
+
+  &-link {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    padding: 17px 87px;
+    display: block;
+
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+
+    &:last-child {
+      margin-left: 20px;
+    }
+
+    @media (max-width: 1263px) {
+      padding: 17px 30px;
+    }
+  }
+}

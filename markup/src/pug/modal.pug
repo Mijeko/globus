@@ -1,0 +1,18 @@
+.common-modal
+    .common-form.vacancy-form
+        .vacancy-form-title Откликнуться на вакансию
+        .common-form-row.grouped
+            .common-form-element
+                input(type="text" name="name" placeholder="Ваше имя*").common-form-input
+            .common-form-element
+                input(type="tel" name="phone" placeholder="Ваш телефон*").common-form-input.js-mask-ru
+        .common-form-row
+            .common-form-element.file
+                label Прикрепить файл
+                input(type="file" name="file")
+        .common-form-row
+            .common-form-element
+                textarea(name="message" placeholder="Сопроводительное письмо*" rows='5').common-form-textarea
+        .common-form-row.grouped.center
+            .common-form-agree Наживая на кнопку “отправить” вы даете согласие на обработку <a href="">персональных данных</a> и <a href="">соглашение о пользовании сайтом</a>
+            button(type="submit").common-form-submit.btn-main Отправить резюме

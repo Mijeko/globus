@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        script(src="https://kit.fontawesome.com/75e4faf288.js" crossorigin="anonymous")
+        title Вёрстка
+    body
+        .main-wrapper
+            .upper-header-wrapper
+                .upper-header.container
+                    a(href="").upper-header-link.btn-filled Детям
+                    a(href="").upper-header-link.btn-light Состояние счета
+                    a(href="").upper-header-link.btn-light Контакты
+            include header
+            .main-content
+                block contents
+            include footer

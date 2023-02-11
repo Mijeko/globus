@@ -1,0 +1,84 @@
+include mixin/menuItem
+
+.container
+    header.header-mobile
+        .header-mobile-logo
+            img(src="/assets/images/logo.svg")
+        .hamburger-wrap
+            .hamburger-wrap.js-show-hamburger
+                .hamburger-line
+                .hamburger-line
+                .hamburger-line
+            .header-mobile-layer
+                .header-mobile-layer-header
+                    .hamburger-close.js-hide-hamburger
+                        .hamburger-close-line
+                        .hamburger-close-line
+                .header-mobile-layer-content
+                    .upper-header
+                        a(href="").upper-header-link.btn-light Детям
+                        a(href="").upper-header-link.btn-light Состояние счета
+                        a(href="").upper-header-link.btn-light Контакты
+                    .header-contacts
+                        a(href="tel:+73852423008").header-contacts-link +7 (3852) 42-30-08
+                        a(href="tel:+73852423386").header-contacts-link +7 (3852) 42-33-86
+
+    header.header
+        .header-address-container
+            .header-address
+                .header-address-item г. Барнаул, 50 лет СССР, 29
+                .header-address-item г. Барнаул, Глушкова, 48
+        .logo-container
+            a.logo(href="/")
+                img(src="./assets/images/logo.svg")
+        .header-contacts-container
+            .header-contacts
+                a(href="tel:+73852423008").header-contacts-link +7 (3852) 42-30-08
+                a(href="tel:+73852423386").header-contacts-link +7 (3852) 42-33-86
+    .swiper.menu-slider
+        .swiper-wrapper.menu
+            -
+                var menu = [
+                    {
+                        title: 'Главная',
+                        href: '/',
+                        activeClass: 'active',
+                    },
+                    {
+                        title: 'Новости',
+                        href: '/',
+                        activeClass: '',
+                    },
+                    {
+                        title: 'О комбинате',
+                        href: '/',
+                        activeClass: '',
+                    },
+                    {
+                        title: 'Меню',
+                        href: '/',
+                        activeClass: '',
+                    },
+                    {
+                        title: 'Услуги',
+                        href: '/',
+                        activeClass: '',
+                    },
+                    {
+                        title: 'Закупки',
+                        href: '/',
+                        activeClass: '',
+                    },
+                    {
+                        title: 'Документы',
+                        href: '/',
+                        activeClass: '',
+                    },
+                    {
+                        title: 'Вакансии',
+                        href: '/',
+                        activeClass: '',
+                    },
+                ]
+            each item,index in menu
+                +menuItem(item)

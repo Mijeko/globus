@@ -1,0 +1,12 @@
+include menuCatalogItemSingle
+
+mixin menuCatalogItem(item)
+    if item.title
+        .menu-catalog-title=item.title
+        .menu-catalog
+            each child, index in item.childs
+                +menuCatalogItemSingle(child)
+    else
+        .menu-catalog
+            each child, index in item.childs
+                +menuCatalogItemSingle(child)

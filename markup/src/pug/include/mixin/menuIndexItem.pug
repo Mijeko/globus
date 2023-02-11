@@ -1,0 +1,5 @@
+mixin menuIndexItem(item)
+    .menu-index-list-item-wrapper
+        .menu-index-list-item(style="background-image:url(" + item.image + ");")
+            .menu-index-list-item__title!=item.title
+            a(href=item.href).menu-index-list-item__link Подробнее

@@ -1,0 +1,6 @@
+mixin contactsLink(item)
+    .contacts-link-item-wrapper
+        .contacts-link-item
+            .contacts-link-item-img-wrapper
+                img(src=item.image).contacts-link-item-img
+            a(href=item.href targe="_blank").contacts-link-item__title=item.title

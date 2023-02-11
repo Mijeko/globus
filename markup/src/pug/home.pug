@@ -1,0 +1,235 @@
+extends include/layer
+
+include include/mixin/importantParentItem
+
+include include/mixin/eatSlideItem
+
+block contents
+    .container
+        .home-slider-container
+            .swiper.home-slider-text
+                .swiper-wrapper
+                    .swiper-slide
+                        .home-slider-title «КШП – Глобус» берет на себя ответственность
+                        .home-slider-description За реализацию Политики в области качества и безопасности пищевой продукции.<br>Обеспечиваем сбалансированное питание для детей: соблюдаем все нормы по содержанию белков, жиров, углеводов в наших блюдах.
+                    .swiper-slide
+                        .home-slider-title Реагируем на все обращения граждан
+                        .home-slider-description Проводим встречи с родителями, разъясняем информацию по возникающим вопросам, принимаем гостей в наших столовых, открыты к обратной связи.
+                    .swiper-slide
+                        .home-slider-title Контролируем санитарные нормы
+                        .home-slider-description Проверяем состояние производственных помещений, инвентаря, посуды, а также проводим регулярные проверки работников на соблюдение правил личной гигиены.
+                    .swiper-slide
+                        .home-slider-title Производим контроль при закупках сырья
+                        .home-slider-description Контролируем правильность закладки продуктов и соблюдения параметров технологических процессов при приготовлении блюд.
+                    .swiper-slide
+                        .home-slider-title Прививаем ответственность сотрудникам
+                        .home-slider-description За обеспечение безопасности пищевой продукции и соблюдением требований нормативной документации.
+                .swiper-button-next
+                .swiper-button-prev
+                .home-slider-pagination-control
+                    .home-slider-pagination-control-fraction#pagination-control-fraction
+                    .swiper-pagination
+            .swiper.home-slider-images
+                .swiper-wrapper
+                    .swiper-slide
+                        img(src='/assets/images/slider/home/1.png')
+                    .swiper-slide
+                        img(src='/assets/images/slider/home/2.png')
+                    .swiper-slide
+                        img(src='/assets/images/slider/home/3.png')
+                    .swiper-slide
+                        img(src='/assets/images/slider/home/4.png')
+                    .swiper-slide
+                        img(src='/assets/images/slider/home/5.png')
+        .home-short-phrase-container
+            .home-short-phrase-logo
+                img(src="/assets/images/logo.svg")
+            .home-short-phrase-list
+                .home-short-phrase-list-item Вкусное и здоровое питание в школах и детских лагерях
+                .home-short-phrase-list-item Свежие продукты от проверенных поставщиков
+                .home-short-phrase-list-item Наличие всех документов и сертификатов
+    .home-statistic-container.home-statistic-slider
+        .home-statistic.container.swiper-wrapper
+            .home-statistic-item.swiper-slide
+                .home-statistic-item__number 590
+                .home-statistic-item__label Работников в школьных<br>столовых
+            .home-statistic-item.swiper-slide
+                .home-statistic-item__number 80
+                .home-statistic-item__label Довольных школ с вкусным<br>и правильным питанием
+            .home-statistic-item.swiper-slide
+                .home-statistic-item__number 1000
+                .home-statistic-item__label Сытых школьников<br>и довольных родителей
+        .swiper-pagination
+    .container
+        .important-parent
+            .important-parent-title Важно для родителей
+            .important-parent-list-wrppaer
+                .important-parent-list
+                    -
+                        var importants = [
+                            {
+                                title: 'Наша еда не бывает холодной',
+                                description: 'Во всех школах регулируется температура подачи блюд, также она измеряется термометрами. Готовят еду при температуре 180-250 С. Пища, комфортная для приема - не более 40 С.<br>Линии раздачи оснащены подогревом: электрическим или водяным, чтобы поддерживать температуру готовых блюд. Пища подается комнатной температуры для здоровья детей.<br>Также у всех плит и холодильников соблюдаются температурные режимы.',
+                                images: [
+                                    {src: '/assets/images/important-parent/1/1.png'},
+                                    {src: '/assets/images/important-parent/1/2.png'},
+                                    {src: '/assets/images/important-parent/1/3.png'},
+                                ],
+                            },
+                            {
+                                title: 'Блюда готовятся в школе',
+                                description: "Приготовление питания происходит на месте в школьных столовых. Столовые устроены таким образом, что процесс приготовления пищи виден полностью.",
+                                images: [
+                                    {src: '/assets/images/important-parent/2/1.png'},
+                                    {src: '/assets/images/important-parent/2/2.png'},
+                                    {src: '/assets/images/important-parent/2/3.png'},
+                                ],
+                            },
+                            {
+                                title: 'Многоступенчатый контроль за качеством продуктов',
+                                description: "<div>При приеме продуктов используется система пищевой безопасности ХАССП. Также на предприятии у каждого работника есть памятки по проверке качества продукции.</div>" +
+                                        "<div class='b'>Сырье проходит 3 уровня проверки:</div>" +
+                                        "<div class='p'>1. При приеме в «КШП – Глобус»</div>" +
+                                        "<div>Проходит тщательный отбор поставщиков и входной контроль сырья: проводим тестирования, анализы в лаборатории Россельхознадзора, собираем комиссию по документам (производится проверка соответствия нормативам для школьных комбинатов, проверяются сертификаты соответствия и сертификаты государственных регистраций), подписываются акты тестирования на пригодность. Продукты взвешивают, осматривают на вкус, цвет, запах (органолептика). Только после всего перечисленного сырье идет в работу.</div>" +
+                                        "<div class='p'>2. Заведующей столовой</div>"+
+                                        "<div>На точках заведующие столовых проверяют продукцию по счету, по весу, по органолептике (визуально, по вкусу, по обонянию и осязанию) и другим характеристикам.</div>"+
+                                        "<div class='p'>3. Поваром при непосредственной готовке</div>"+
+                                        "Проводится повторная проверка продукции по всем вышеперечисленным характеристикам.",
+                                images: [
+                                    {src: '/assets/images/important-parent/3/1.png'},
+                                    {src: '/assets/images/important-parent/3/2.png'},
+                                    {src: '/assets/images/important-parent/3/3.png'},
+                                ],
+                            },
+                            {
+                                title: 'Открытая кухня',
+                                description: "Приглашаем родителей в наши столовые, чтобы убедиться в качестве блюд, которые их дети едят в школе каждый день.",
+                                images: [
+                                    {src: '/assets/images/important-parent/4/1.png'},
+                                    {src: '/assets/images/important-parent/4/2.png'},
+                                    {src: '/assets/images/important-parent/4/3.png'},
+                                ],
+                            },
+                        ];
+                    each item,index in importants
+                        +importantParentItem(item)
+                .important-parent-note
+                    .important-parent-note__title Требования к питанию
+                    .important-parent-note__description Основные трбования к качеству питания в АО «КШП – Глобус»
+                    include include/block/requirementsList
+        .eat-slider-container
+            .eat-slider-title Блюда, которые едят ваши дети
+            .swiper.eat-slider
+                .swiper-wrapper.eat-slider-wrapper
+                    -
+                        var eatItems = [
+                            {src: '/assets/images/slider/eat/1.png'},
+                            {src: '/assets/images/slider/eat/2.png'},
+                            {src: '/assets/images/slider/eat/3.png'},
+                            {src: '/assets/images/slider/eat/4.png'},
+                            // {src:'/assets/images/slider/eat/5.png'},
+                            {src: '/assets/images/slider/eat/1.png'},
+                            {src: '/assets/images/slider/eat/2.png'},
+                            {src: '/assets/images/slider/eat/3.png'},
+                            {src: '/assets/images/slider/eat/4.png'},
+                            // {src:'/assets/images/slider/eat/5.png'},
+                            {src: '/assets/images/slider/eat/1.png'},
+                            {src: '/assets/images/slider/eat/2.png'},
+                            {src: '/assets/images/slider/eat/3.png'},
+                            {src: '/assets/images/slider/eat/4.png'},
+                            // {src:'/assets/images/slider/eat/5.png'},
+                        ]
+                    each item, index in eatItems
+                        +eatSlideItem(item)
+                .swiper-pagination
+    .container
+        .common-info
+            .common-info-title Основаная<br>информация о комбинате
+            .common-info-group
+                .common-info-left
+                    img(src="/assets/images/common-info-left.png")
+                .common-info-right
+                    .common-info-text
+                        .common-info-text__description Для современного мира убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствующей насущным потребностям. Повседневная практика показывает, что начало повседневной.
+                        a(href="/").common-info-text__link Подробнее
+                    img(src="/assets/images/common-info-right.png")
+    .sticker
+        .sticker-image
+        .sticker-image
+    .container
+        .dialog-us
+            .dialog-us-image
+                img(src="/assets/images/dialog.png")
+            .dialog-us-container
+                .dialog-us-title Диалог с комбинатом
+                .dialog-us-description Cпециалисты нашего комбината с удовольствием ответят на вопросы! Заполните форму ниже, затем мы с Вами свяжемся и ответим на все Ваши вопросы.
+                .dialog-us-form-container
+                    form.common-form.dialog-us-form
+                        .common-form-row.grouped
+                            .common-form-element
+                                input(type="text" name="name" placeholder="Ваше имя*").common-form-input
+                            .common-form-element
+                                input(type="tel" name="phone" placeholder="Ваш телефон*").common-form-input.js-mask-ru
+                        .common-form-row
+                            .common-form-element
+                                input(type="email" name="email" placeholder="Ваш e-mail").common-form-input
+                        .common-form-row
+                            .common-form-element
+                                textarea(name="message" placeholder="Напишите ваш вопрос*").common-form-textarea
+                        .common-form-row.grouped
+                            .common-form-element.radio
+                                input(type="radio" id="type_contact_1" name="type_contact" checked="checked" value="1")
+                                label(for="type_contact_1") Перезвонить по телефон
+                            .common-form-element.radio
+                                input(type="radio" id="type_contact_2" name="type_contact"  value="2")
+                                label(for="type_contact_2") Ответить на email
+                        .common-form-row.grouped.common-form-agree-container
+                            .common-form-agree Наживая на кнопку “отправить” вы даете согласие на обработку <a href="">персональных данных</a> и <a href="">соглашение о пользовании сайтом</a>
+                            button(type="submit").common-form-submit.btn-main Отправить
+        .contragents
+            .contragents-title Кто с нами сотрудничает
+            .contragents-filter
+                .contragents-filter-item.school Школы
+                .contragents-filter-item.camp Детские лагеря
+            .contragents-map
+                script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaa71dfd284efbb64a8522129cb56169226f88b4468db1d5f1aebeb5c978ee1a2&width=100%25&height=480&lang=ru_RU&scroll=true')
+        .home-about-container
+            .home-about
+                .home-about-title Столовая «Нива»
+                .home-about-description Для современного мира убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствующей насущным потребностям.
+                a(href="").home-about-link.btn-main Посетить
+            .home-about-slider.swiper
+                .jelly-slider-container.home-about-wrapper.swiper-wrapper
+                    .jelly-slider-box.swiper-slide
+                        img(src='https://source.unsplash.com/1000x800')
+                    .jelly-slider-box.swiper-slide
+                        img(src='https://source.unsplash.com/1000x802')
+                    .jelly-slider-box.swiper-slide
+                        img(src='https://source.unsplash.com/1000x804')
+                    .jelly-slider-box.swiper-slide
+                        img(src='https://source.unsplash.com/1000x806')
+                .swiper-pagination
+    .home-contacts-wrapper
+        .container
+            .home-contacts-title Контакты
+        .home-contacts-container.container
+            .home-contacts-contact-container
+                .home-contacts-contact
+                    div(class="home-contacts-contact-item contact-block-item --phone")
+                        .home-contacts-contact-item__label Приемная
+                        a(href="tel:+73852423008").home-contacts-contact-item__link.contact-block-item__link +7 (3852) 42-30-08
+                    div(class="home-contacts-contact-item contact-block-item --phone")
+                        .home-contacts-contact-item__label Производственный отдел
+                        a(href="tel:+73852423008").home-contacts-contact-item__link.contact-block-item__link +7 (3852) 42-63-78
+                    div(class="home-contacts-contact-item contact-block-item --phone")
+                        .home-contacts-contact-item__label Бухгалтерия
+                        a(href="tel:+73852423008").home-contacts-contact-item__link.contact-block-item__link +7 (3852) 47-20-39
+                    div(class="home-contacts-contact-item contact-block-item --email")
+                        .home-contacts-contact-item__label E-mail для обращения
+                        a(href="mailto:info@кшп-глобус.рф").home-contacts-contact-item__link.contact-block-item__link info@кшп-глобус.рф
+                .contacts-address
+                    .contacts-address-first Столовая, кулинария,<br>администрация, склад<br><span class="big">г. Барнаул, 50 лет СССР, 29</span>
+                    .contacts-address-second Второй склад<br><span class="big">г. Барнаул, Глушкова, 48</span>
+            .home-contacts-map-container
+                .home-contacts-map
+                    script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A905e2330af59220818f94a17873c79846e726aadb40c4d84971d214434d60877&width=100%&height=476&lang=ru_RU&scroll=true')
