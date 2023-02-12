@@ -342,7 +342,7 @@
         </div>
         <div class="home-about-container">
             <div class="home-about">
-                <div class="home-about-title">Столовая «Нива»</div>
+                <div class="home-about-title"><?php $APPLICATION->IncludeComponent('bitrix:main.include', '.default', array()); ?>Столовая «Нива»</div>
                 <div class="home-about-description">Для современного мира убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствующей насущным потребностям.</div>
                 <a class="home-about-link btn-main" href="">Посетить</a></div>
 
