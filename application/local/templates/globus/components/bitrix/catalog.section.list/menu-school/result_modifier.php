@@ -87,7 +87,8 @@ if (0 < $arResult['SECTIONS_COUNT']) {
 $cp = $this->__component;
 if (is_object($cp)) {
     $cp->arResult['SECTIONS'] = $arResult['SECTIONS'];
+    $cp->arResult['PARAMS'] = $arParams;
 
-    $cp->SetResultCacheKeys(array('SECTIONS'));
+    $cp->SetResultCacheKeys(array('SECTIONS', 'PARAMS'));
 }
 ?>

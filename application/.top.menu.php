@@ -37,14 +37,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Закупки", 
-		"", 
+		"purchase/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Документы", 
-		"", 
+		"documents/",
 		Array(), 
 		Array(), 
 		"" 

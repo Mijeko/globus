@@ -14,8 +14,8 @@
             "catalog-menu",
             array(
                 "COMPONENT_TEMPLATE" => "catalog-menu",
-                "IBLOCK_TYPE" => "documents",
-                "IBLOCK_ID" => "6",
+                "IBLOCK_TYPE" => $arResult['PARAMS']['IBLOCK_TYPE'],
+                "IBLOCK_ID" => $arResult['PARAMS']['IBLOCK_ID'],
                 "NEWS_COUNT" => "300",
                 "SORT_BY1" => "ACTIVE_FROM",
                 "SORT_ORDER1" => "DESC",
@@ -79,12 +79,14 @@
 </div>
 
 
-<div class="requirements">
-    <div class="requirements-title">Требования к питанию</div>
-    <div class="requirements-desc">Основные требования к качеству питания в КШП «Глобус»</div>
-    <ol class="requirements-list">
-        <li class="requirements-list-item"><a class="requirements-list-link" href="">Сан.Пин 2.3/2.4.3590-20 «Санитарно-эпидемиологические требования к организации общественного питания»</a></li>
-        <li class="requirements-list-item"><a class="requirements-list-link" href="">МР 2.4.0179-20 «Рекомендации по организации питания для обучающихся образовательных организаций»</a></li>
-        <li class="requirements-list-item"><a class="requirements-list-link" href="">Приложение №6 к СанПиН 2.3/2.4.3590-20 «Перечень пищевой продукции, которая не допускается при организации питания детей»</a></li>
-    </ol>
-</div>
+<?php if (canShowRequirements()): ?>
+    <div class="requirements">
+        <div class="requirements-title">Требования к питанию</div>
+        <div class="requirements-desc">Основные требования к качеству питания в КШП «Глобус»</div>
+        <ol class="requirements-list">
+            <li class="requirements-list-item"><a class="requirements-list-link" href="">Сан.Пин 2.3/2.4.3590-20 «Санитарно-эпидемиологические требования к организации общественного питания»</a></li>
+            <li class="requirements-list-item"><a class="requirements-list-link" href="">МР 2.4.0179-20 «Рекомендации по организации питания для обучающихся образовательных организаций»</a></li>
+            <li class="requirements-list-item"><a class="requirements-list-link" href="">Приложение №6 к СанПиН 2.3/2.4.3590-20 «Перечень пищевой продукции, которая не допускается при организации питания детей»</a></li>
+        </ol>
+    </div>
+<?php endif; ?>

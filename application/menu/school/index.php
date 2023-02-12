@@ -26,7 +26,7 @@ $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "menu-school", Arr
     "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
     "CACHE_GROUPS" => "Y",    // Учитывать права доступа
     "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
-    "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
+    "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
 ),
     false
 );
