@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `b_admin_notify` (
   `NOTIFY_TYPE` char(1) COLLATE utf8mb3_unicode_ci NOT NULL DEFAULT 'M',
   PRIMARY KEY (`ID`),
   KEY `IX_AD_TAG` (`TAG`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `b_agent` (
   KEY `ix_act_next_exec` (`ACTIVE`,`NEXT_EXEC`),
   KEY `ix_agent_user_id` (`USER_ID`),
   KEY `ix_agent_name` (`NAME`(100))
-) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -439,7 +439,7 @@ CREATE TABLE IF NOT EXISTS `b_cache_tag` (
   PRIMARY KEY (`ID`),
   KEY `ix_b_cache_tag_0` (`SITE_ID`,`CACHE_SALT`,`RELATIVE_PATH`(50)),
   KEY `ix_b_cache_tag_1` (`TAG`)
-) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=175 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -614,7 +614,7 @@ CREATE TABLE IF NOT EXISTS `b_component_params` (
   KEY `ix_comp_params_name` (`COMPONENT_NAME`),
   KEY `ix_comp_params_path` (`SITE_ID`,`REAL_PATH`),
   KEY `ix_comp_params_sname` (`SITE_ID`,`COMPONENT_NAME`)
-) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -826,7 +826,7 @@ CREATE TABLE IF NOT EXISTS `b_event_log` (
   PRIMARY KEY (`ID`),
   KEY `ix_b_event_log_time` (`TIMESTAMP_X`),
   KEY `ix_b_event_log_audit_type_time` (`AUDIT_TYPE_ID`,`TIMESTAMP_X`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -1969,7 +1969,7 @@ CREATE TABLE IF NOT EXISTS `b_iblock` (
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ix_iblock_api_code` (`API_CODE`),
   KEY `ix_iblock` (`IBLOCK_TYPE_ID`,`LID`,`ACTIVE`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -2023,7 +2023,7 @@ CREATE TABLE IF NOT EXISTS `b_iblock_element` (
   KEY `ix_iblock_element_4` (`IBLOCK_ID`,`XML_ID`,`WF_PARENT_ELEMENT_ID`),
   KEY `ix_iblock_element_3` (`WF_PARENT_ELEMENT_ID`),
   KEY `ix_iblock_element_code` (`IBLOCK_ID`,`CODE`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -2067,7 +2067,7 @@ CREATE TABLE IF NOT EXISTS `b_iblock_element_property` (
   KEY `ix_iblock_element_prop_enum` (`VALUE_ENUM`,`IBLOCK_PROPERTY_ID`),
   KEY `ix_iblock_element_prop_num` (`VALUE_NUM`,`IBLOCK_PROPERTY_ID`),
   KEY `ix_iblock_element_prop_val` (`VALUE`(50),`IBLOCK_PROPERTY_ID`,`IBLOCK_ELEMENT_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -2184,7 +2184,7 @@ CREATE TABLE IF NOT EXISTS `b_iblock_property` (
   KEY `ix_iblock_property_1` (`IBLOCK_ID`),
   KEY `ix_iblock_property_3` (`LINK_IBLOCK_ID`),
   KEY `ix_iblock_property_2` (`CODE`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -2281,7 +2281,7 @@ CREATE TABLE IF NOT EXISTS `b_iblock_section` (
   KEY `ix_iblock_section_code` (`IBLOCK_ID`,`CODE`),
   KEY `ix_iblock_section_left_margin2` (`IBLOCK_ID`,`LEFT_MARGIN`),
   KEY `ix_iblock_section_right_margin2` (`IBLOCK_ID`,`RIGHT_MARGIN`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -4226,7 +4226,7 @@ CREATE TABLE IF NOT EXISTS `b_search_content` (
   UNIQUE KEY `UX_B_SEARCH_CONTENT` (`MODULE_ID`,`ITEM_ID`),
   KEY `IX_B_SEARCH_CONTENT_1` (`MODULE_ID`,`PARAM1`(50),`PARAM2`(50)),
   KEY `IX_B_SEARCH_CONTENT_2` (`ENTITY_ID`(50),`ENTITY_TYPE_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -4352,7 +4352,7 @@ CREATE TABLE IF NOT EXISTS `b_search_stem` (
   `STEM` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `UX_B_SEARCH_STEM` (`STEM`)
-) ENGINE=InnoDB AUTO_INCREMENT=288 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=294 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -5715,7 +5715,7 @@ CREATE TABLE IF NOT EXISTS `b_user_option` (
   `COMMON` char(1) COLLATE utf8mb3_unicode_ci NOT NULL DEFAULT 'N',
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ux_user_category_name` (`USER_ID`,`CATEGORY`,`NAME`)
-) ENGINE=InnoDB AUTO_INCREMENT=435 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=466 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
@@ -5796,7 +5796,7 @@ CREATE TABLE IF NOT EXISTS `b_user_stored_auth` (
   `IP_ADDR` int(10) unsigned NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `ux_user_hash` (`USER_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- Экспортируемые данные не выделены.
 
