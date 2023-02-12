@@ -18,8 +18,10 @@
     <?php require_once('include/parts/header.php'); ?>
     <?php //$APPLICATION->IncludeFile('include/parts/header.php'); ?>
     <div class="main-content">
-        <div class="container">
-            <?php $APPLICATION->IncludeComponent("bitrix:breadcrumb", "main", Array(), false); ?>
+
+        <?php if (canShowPageContainer()): ?>
+            <div class="container">
+        <?php endif; ?>
 
             <?php if (canShowTitle()): ?>
                 <h1 class="site-title"><?php $APPLICATION->ShowTitle(); ?></h1>

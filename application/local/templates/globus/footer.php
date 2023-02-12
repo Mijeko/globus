@@ -1,5 +1,8 @@
-<!-- close .container -->
-</div>
+<?php if (canShowPageContainer()): ?>
+    <!-- close .container -->
+    </div>
+<?php endif; ?>
+
 
 <?php if (canShowFooterContacts()): ?>
     <div class="home-contacts-wrapper">

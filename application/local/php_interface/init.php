@@ -36,3 +36,13 @@ function canShowTitle()
 
     return true;
 }
+
+function canShowPageContainer()
+{
+    global $APPLICATION;
+    if ($APPLICATION->GetCurDir() == '/') {
+        return false;
+    }
+
+    return true;
+}

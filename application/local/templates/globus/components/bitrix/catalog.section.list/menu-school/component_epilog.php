@@ -83,10 +83,20 @@
     <div class="requirements">
         <div class="requirements-title">Требования к питанию</div>
         <div class="requirements-desc">Основные требования к качеству питания в КШП «Глобус»</div>
-        <ol class="requirements-list">
-            <li class="requirements-list-item"><a class="requirements-list-link" href="">Сан.Пин 2.3/2.4.3590-20 «Санитарно-эпидемиологические требования к организации общественного питания»</a></li>
-            <li class="requirements-list-item"><a class="requirements-list-link" href="">МР 2.4.0179-20 «Рекомендации по организации питания для обучающихся образовательных организаций»</a></li>
-            <li class="requirements-list-item"><a class="requirements-list-link" href="">Приложение №6 к СанПиН 2.3/2.4.3590-20 «Перечень пищевой продукции, которая не допускается при организации питания детей»</a></li>
-        </ol>
+        <?php $APPLICATION->IncludeComponent("bitrix:menu", "requirements", Array(
+            "COMPONENT_TEMPLATE" => ".default",
+            "ROOT_MENU_TYPE" => "requirements",    // Тип меню для первого уровня
+            "MENU_CACHE_TYPE" => "N",    // Тип кеширования
+            "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+            "MENU_CACHE_USE_GROUPS" => "Y",    // Учитывать права доступа
+            "MENU_CACHE_GET_VARS" => "",    // Значимые переменные запроса
+            "MAX_LEVEL" => "1",    // Уровень вложенности меню
+            "CHILD_MENU_TYPE" => "left",    // Тип меню для остальных уровней
+            "USE_EXT" => "N",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
+            "DELAY" => "N",    // Откладывать выполнение шаблона меню
+            "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+        ),
+            false
+        ); ?>
     </div>
 <?php endif; ?>

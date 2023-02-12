@@ -1,115 +1,220 @@
 <?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php"); ?>
 <?php $APPLICATION->SetTitle('Главная страница'); ?>
     <div class="container">
-        <div class="home-slider-container">
-            <div class="swiper home-slider-text">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="home-slider-title">«КШП – Глобус» берет на себя ответственность</div>
-                        <div class="home-slider-description">За реализацию Политики в области качества и безопасности пищевой продукции.<br>Обеспечиваем сбалансированное питание для детей: соблюдаем все нормы по содержанию белков, жиров, углеводов в наших блюдах.</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="home-slider-title">Реагируем на все обращения граждан</div>
-                        <div class="home-slider-description">Проводим встречи с родителями, разъясняем информацию по возникающим вопросам, принимаем гостей в наших столовых, открыты к обратной связи.</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="home-slider-title">Контролируем санитарные нормы</div>
-                        <div class="home-slider-description">Проверяем состояние производственных помещений, инвентаря, посуды, а также проводим регулярные проверки работников на соблюдение правил личной гигиены.</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="home-slider-title">Производим контроль при закупках сырья</div>
-                        <div class="home-slider-description">Контролируем правильность закладки продуктов и соблюдения параметров технологических процессов при приготовлении блюд.</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="home-slider-title">Прививаем ответственность сотрудникам</div>
-                        <div class="home-slider-description">За обеспечение безопасности пищевой продукции и соблюдением требований нормативной документации.</div>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="home-slider-pagination-control">
-                    <div class="home-slider-pagination-control-fraction" id="pagination-control-fraction"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="swiper home-slider-images">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="<?= ASSETS_PATH; ?>/images/slider/home/1.png"></div>
-                    <div class="swiper-slide"><img src="<?= ASSETS_PATH; ?>/images/slider/home/2.png"></div>
-                    <div class="swiper-slide"><img src="<?= ASSETS_PATH; ?>/images/slider/home/3.png"></div>
-                    <div class="swiper-slide"><img src="<?= ASSETS_PATH; ?>/images/slider/home/4.png"></div>
-                    <div class="swiper-slide"><img src="<?= ASSETS_PATH; ?>/images/slider/home/5.png"></div>
-                </div>
-            </div>
-        </div>
+
+        <?php $APPLICATION->IncludeComponent("bitrix:news.list", "home-slider", Array(
+            "COMPONENT_TEMPLATE" => ".default",
+            "IBLOCK_TYPE" => "sliders",    // Тип информационного блока (используется только для проверки)
+            "IBLOCK_ID" => "10",    // Код информационного блока
+            "NEWS_COUNT" => "20",    // Количество новостей на странице
+            "SORT_BY1" => "ID",    // Поле для первой сортировки новостей
+            "SORT_ORDER1" => "ASC",    // Направление для первой сортировки новостей
+            "SORT_BY2" => "SORT",    // Поле для второй сортировки новостей
+            "SORT_ORDER2" => "ASC",    // Направление для второй сортировки новостей
+            "FILTER_NAME" => "",    // Фильтр
+            "FIELD_CODE" => array(    // Поля
+                0 => "",
+                1 => "",
+            ),
+            "PROPERTY_CODE" => array(    // Свойства
+                0 => "",
+                1 => "",
+            ),
+            "CHECK_DATES" => "Y",    // Показывать только активные на данный момент элементы
+            "DETAIL_URL" => "",    // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+            "AJAX_MODE" => "N",    // Включить режим AJAX
+            "AJAX_OPTION_JUMP" => "N",    // Включить прокрутку к началу компонента
+            "AJAX_OPTION_STYLE" => "Y",    // Включить подгрузку стилей
+            "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
+            "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
+            "CACHE_TYPE" => "A",    // Тип кеширования
+            "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
+            "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
+            "CACHE_GROUPS" => "Y",    // Учитывать права доступа
+            "PREVIEW_TRUNCATE_LEN" => "",    // Максимальная длина анонса для вывода (только для типа текст)
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
+            "SET_TITLE" => "N",    // Устанавливать заголовок страницы
+            "SET_BROWSER_TITLE" => "N",    // Устанавливать заголовок окна браузера
+            "SET_META_KEYWORDS" => "N",    // Устанавливать ключевые слова страницы
+            "SET_META_DESCRIPTION" => "N",    // Устанавливать описание страницы
+            "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
+            "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
+            "PARENT_SECTION" => "",    // ID раздела
+            "PARENT_SECTION_CODE" => "",    // Код раздела
+            "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
+            "STRICT_SECTION_CHECK" => "N",    // Строгая проверка раздела для показа списка
+            "DISPLAY_DATE" => "Y",    // Выводить дату элемента
+            "DISPLAY_NAME" => "Y",    // Выводить название элемента
+            "DISPLAY_PICTURE" => "Y",    // Выводить изображение для анонса
+            "DISPLAY_PREVIEW_TEXT" => "Y",    // Выводить текст анонса
+            "PAGER_TEMPLATE" => ".default",    // Шаблон постраничной навигации
+            "DISPLAY_TOP_PAGER" => "N",    // Выводить над списком
+            "DISPLAY_BOTTOM_PAGER" => "Y",    // Выводить под списком
+            "PAGER_TITLE" => "Новости",    // Название категорий
+            "PAGER_SHOW_ALWAYS" => "N",    // Выводить всегда
+            "PAGER_DESC_NUMBERING" => "N",    // Использовать обратную навигацию
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",    // Время кеширования страниц для обратной навигации
+            "PAGER_SHOW_ALL" => "N",    // Показывать ссылку "Все"
+            "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
+            "SET_STATUS_404" => "N",    // Устанавливать статус 404
+            "SHOW_404" => "N",    // Показ специальной страницы
+            "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
+        ),
+            false
+        ); ?>
+
+
         <div class="home-short-phrase-container">
             <div class="home-short-phrase-logo"><img src="<?= ASSETS_PATH; ?>/images/logo.svg"></div>
-            <div class="home-short-phrase-list">
-                <div class="home-short-phrase-list-item">Вкусное и здоровое питание в школах и детских лагерях</div>
-                <div class="home-short-phrase-list-item">Свежие продукты от проверенных поставщиков</div>
-                <div class="home-short-phrase-list-item">Наличие всех документов и сертификатов</div>
-            </div>
+            <?php $APPLICATION->IncludeComponent("bitrix:menu", "shorts", Array(
+                "COMPONENT_TEMPLATE" => ".default",
+                "ROOT_MENU_TYPE" => "short",    // Тип меню для первого уровня
+                "MENU_CACHE_TYPE" => "N",    // Тип кеширования
+                "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                "MENU_CACHE_USE_GROUPS" => "Y",    // Учитывать права доступа
+                "MENU_CACHE_GET_VARS" => "",    // Значимые переменные запроса
+                "MAX_LEVEL" => "1",    // Уровень вложенности меню
+                "CHILD_MENU_TYPE" => "left",    // Тип меню для остальных уровней
+                "USE_EXT" => "N",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                "DELAY" => "N",    // Откладывать выполнение шаблона меню
+                "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+            ),
+                false
+            ); ?>
         </div>
     </div>
-    <div class="home-statistic-container home-statistic-slider">
-        <div class="home-statistic container swiper-wrapper">
-            <div class="home-statistic-item swiper-slide">
-                <div class="home-statistic-item__number">590</div>
-                <div class="home-statistic-item__label">Работников в школьных<br>столовых</div>
-            </div>
-            <div class="home-statistic-item swiper-slide">
-                <div class="home-statistic-item__number">80</div>
-                <div class="home-statistic-item__label">Довольных школ с вкусным<br>и правильным питанием</div>
-            </div>
-            <div class="home-statistic-item swiper-slide">
-                <div class="home-statistic-item__number">1000</div>
-                <div class="home-statistic-item__label">Сытых школьников<br>и довольных родителей</div>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
+
+<?php $APPLICATION->IncludeComponent("bitrix:news.list", "home-statistic", Array(
+    "COMPONENT_TEMPLATE" => ".default",
+    "IBLOCK_TYPE" => "sliders",    // Тип информационного блока (используется только для проверки)
+    "IBLOCK_ID" => "11",    // Код информационного блока
+    "NEWS_COUNT" => "20",    // Количество новостей на странице
+    "SORT_BY1" => "ID",    // Поле для первой сортировки новостей
+    "SORT_ORDER1" => "ASC",    // Направление для первой сортировки новостей
+    "SORT_BY2" => "SORT",    // Поле для второй сортировки новостей
+    "SORT_ORDER2" => "ASC",    // Направление для второй сортировки новостей
+    "FILTER_NAME" => "",    // Фильтр
+    "FIELD_CODE" => array(    // Поля
+        0 => "",
+        1 => "",
+    ),
+    "PROPERTY_CODE" => array(    // Свойства
+        0 => "",
+        1 => "",
+    ),
+    "CHECK_DATES" => "Y",    // Показывать только активные на данный момент элементы
+    "DETAIL_URL" => "",    // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+    "AJAX_MODE" => "N",    // Включить режим AJAX
+    "AJAX_OPTION_JUMP" => "N",    // Включить прокрутку к началу компонента
+    "AJAX_OPTION_STYLE" => "Y",    // Включить подгрузку стилей
+    "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
+    "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
+    "CACHE_TYPE" => "A",    // Тип кеширования
+    "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
+    "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
+    "CACHE_GROUPS" => "Y",    // Учитывать права доступа
+    "PREVIEW_TRUNCATE_LEN" => "",    // Максимальная длина анонса для вывода (только для типа текст)
+    "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
+    "SET_TITLE" => "N",    // Устанавливать заголовок страницы
+    "SET_BROWSER_TITLE" => "N",    // Устанавливать заголовок окна браузера
+    "SET_META_KEYWORDS" => "N",    // Устанавливать ключевые слова страницы
+    "SET_META_DESCRIPTION" => "N",    // Устанавливать описание страницы
+    "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
+    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
+    "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
+    "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
+    "PARENT_SECTION" => "",    // ID раздела
+    "PARENT_SECTION_CODE" => "",    // Код раздела
+    "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
+    "STRICT_SECTION_CHECK" => "N",    // Строгая проверка раздела для показа списка
+    "DISPLAY_DATE" => "Y",    // Выводить дату элемента
+    "DISPLAY_NAME" => "Y",    // Выводить название элемента
+    "DISPLAY_PICTURE" => "Y",    // Выводить изображение для анонса
+    "DISPLAY_PREVIEW_TEXT" => "Y",    // Выводить текст анонса
+    "PAGER_TEMPLATE" => ".default",    // Шаблон постраничной навигации
+    "DISPLAY_TOP_PAGER" => "N",    // Выводить над списком
+    "DISPLAY_BOTTOM_PAGER" => "Y",    // Выводить под списком
+    "PAGER_TITLE" => "Новости",    // Название категорий
+    "PAGER_SHOW_ALWAYS" => "N",    // Выводить всегда
+    "PAGER_DESC_NUMBERING" => "N",    // Использовать обратную навигацию
+    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",    // Время кеширования страниц для обратной навигации
+    "PAGER_SHOW_ALL" => "N",    // Показывать ссылку "Все"
+    "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
+    "SET_STATUS_404" => "N",    // Устанавливать статус 404
+    "SHOW_404" => "N",    // Показ специальной страницы
+    "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
+),
+    false
+); ?>
     <div class="container">
-        <div class="important-parent">
-            <div class="important-parent-title">Важно для родителей</div>
-            <div class="important-parent-list-wrppaer">
-                <div class="important-parent-list">
-                    <div class="important-parent-list-item"><a class="important-parent-list-item__title" href="/">Наша еда не бывает холодной</a>
-                        <div class="important-parent-list-item__description">Во всех школах регулируется температура подачи блюд, также она измеряется термометрами. Готовят еду при температуре 180-250 С. Пища, комфортная для приема - не более 40 С.<br>Линии раздачи оснащены подогревом: электрическим или водяным, чтобы поддерживать температуру готовых блюд. Пища подается комнатной температуры для здоровья детей.<br>Также у всех плит и холодильников соблюдаются температурные режимы.</div>
-                        <div class="important-parent-gallery"><a href="<?= ASSETS_PATH; ?>/images/important-parent/1/1.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/1/1.png"></a><a href="<?= ASSETS_PATH; ?>/images/important-parent/1/2.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/1/2.png"></a><a href="<?= ASSETS_PATH; ?>/images/important-parent/1/3.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/1/3.png"></a></div>
-                    </div>
-                    <div class="important-parent-list-item"><a class="important-parent-list-item__title" href="/">Блюда готовятся в школе</a>
-                        <div class="important-parent-list-item__description">Приготовление питания происходит на месте в школьных столовых. Столовые устроены таким образом, что процесс приготовления пищи виден полностью.</div>
-                        <div class="important-parent-gallery"><a href="<?= ASSETS_PATH; ?>/images/important-parent/2/1.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/2/1.png"></a><a href="<?= ASSETS_PATH; ?>/images/important-parent/2/2.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/2/2.png"></a><a href="<?= ASSETS_PATH; ?>/images/important-parent/2/3.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/2/3.png"></a></div>
-                    </div>
-                    <div class="important-parent-list-item"><a class="important-parent-list-item__title" href="/">Многоступенчатый контроль за качеством продуктов</a>
-                        <div class="important-parent-list-item__description">
-                            <div>При приеме продуктов используется система пищевой безопасности ХАССП. Также на предприятии у каждого работника есть памятки по проверке качества продукции.</div>
-                            <div class='b'>Сырье проходит 3 уровня проверки:</div>
-                            <div class='p'>1. При приеме в «КШП – Глобус»</div>
-                            <div>Проходит тщательный отбор поставщиков и входной контроль сырья: проводим тестирования, анализы в лаборатории Россельхознадзора, собираем комиссию по документам (производится проверка соответствия нормативам для школьных комбинатов, проверяются сертификаты соответствия и сертификаты государственных регистраций), подписываются акты тестирования на пригодность. Продукты взвешивают, осматривают на вкус, цвет, запах (органолептика). Только после всего перечисленного сырье идет в работу.</div>
-                            <div class='p'>2. Заведующей столовой</div>
-                            <div>На точках заведующие столовых проверяют продукцию по счету, по весу, по органолептике (визуально, по вкусу, по обонянию и осязанию) и другим характеристикам.</div>
-                            <div class='p'>3. Поваром при непосредственной готовке</div>
-                            Проводится повторная проверка продукции по всем вышеперечисленным характеристикам.
-                        </div>
-                        <div class="important-parent-gallery"><a href="<?= ASSETS_PATH; ?>/images/important-parent/3/1.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/3/1.png"></a><a href="<?= ASSETS_PATH; ?>/images/important-parent/3/2.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/3/2.png"></a><a href="<?= ASSETS_PATH; ?>/images/important-parent/3/3.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/3/3.png"></a></div>
-                    </div>
-                    <div class="important-parent-list-item"><a class="important-parent-list-item__title" href="/">Открытая кухня</a>
-                        <div class="important-parent-list-item__description">Приглашаем родителей в наши столовые, чтобы убедиться в качестве блюд, которые их дети едят в школе каждый день.</div>
-                        <div class="important-parent-gallery"><a href="<?= ASSETS_PATH; ?>/images/important-parent/4/1.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/4/1.png"></a><a href="<?= ASSETS_PATH; ?>/images/important-parent/4/2.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/4/2.png"></a><a href="<?= ASSETS_PATH; ?>/images/important-parent/4/3.png" data-lightbox="roadtrip"><img class="important-parent-gallery-item" src="<?= ASSETS_PATH; ?>/images/important-parent/4/3.png"></a></div>
-                    </div>
-                </div>
-                <div class="important-parent-note">
-                    <div class="important-parent-note__title">Требования к питанию</div>
-                    <div class="important-parent-note__description">Основные трбования к качеству питания в АО «КШП – Глобус»</div>
-                    <ol class="requirements-list">
-                        <li class="requirements-list-item"><a class="requirements-list-link" href="">Сан.Пин 2.3/2.4.3590-20 «Санитарно-эпидемиологические требования к организации общественного питания»</a></li>
-                        <li class="requirements-list-item"><a class="requirements-list-link" href="">МР 2.4.0179-20 «Рекомендации по организации питания для обучающихся образовательных организаций»</a></li>
-                        <li class="requirements-list-item"><a class="requirements-list-link" href="">Приложение №6 к СанПиН 2.3/2.4.3590-20 «Перечень пищевой продукции, которая не допускается при организации питания детей»</a></li>
-                    </ol>
-                </div>
-            </div>
-        </div>
+        <?php $APPLICATION->IncludeComponent(
+            "bitrix:news.list",
+            "for-parent",
+            array(
+                "COMPONENT_TEMPLATE" => "for-parent",
+                "IBLOCK_TYPE" => "content",
+                "IBLOCK_ID" => "12",
+                "NEWS_COUNT" => "20",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_ORDER1" => "DESC",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER2" => "ASC",
+                "FILTER_NAME" => "",
+                "FIELD_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "PROPERTY_CODE" => array(
+                    0 => "FILES",
+                    1 => "",
+                ),
+                "CHECK_DATES" => "Y",
+                "DETAIL_URL" => "",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "CACHE_TYPE" => "A",
+                "CACHE_TIME" => "36000000",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "PREVIEW_TRUNCATE_LEN" => "",
+                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                "SET_TITLE" => "N",
+                "SET_BROWSER_TITLE" => "N",
+                "SET_META_KEYWORDS" => "N",
+                "SET_META_DESCRIPTION" => "N",
+                "SET_LAST_MODIFIED" => "N",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                "ADD_SECTIONS_CHAIN" => "N",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                "PARENT_SECTION" => "",
+                "PARENT_SECTION_CODE" => "",
+                "INCLUDE_SUBSECTIONS" => "Y",
+                "STRICT_SECTION_CHECK" => "N",
+                "DISPLAY_DATE" => "Y",
+                "DISPLAY_NAME" => "Y",
+                "DISPLAY_PICTURE" => "Y",
+                "DISPLAY_PREVIEW_TEXT" => "Y",
+                "PAGER_TEMPLATE" => ".default",
+                "DISPLAY_TOP_PAGER" => "N",
+                "DISPLAY_BOTTOM_PAGER" => "Y",
+                "PAGER_TITLE" => "Новости",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "PAGER_SHOW_ALL" => "N",
+                "PAGER_BASE_LINK_ENABLE" => "N",
+                "SET_STATUS_404" => "N",
+                "SHOW_404" => "N",
+                "MESSAGE_404" => ""
+            ),
+            false
+        ); ?>
+
         <div class="eat-slider-container">
             <div class="eat-slider-title">Блюда, которые едят ваши дети</div>
             <div class="swiper eat-slider">

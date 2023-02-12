@@ -57,8 +57,7 @@
       letter-spacing: -0.02em;
       color: $text-color;
 
-      &:after {
-        content: "+";
+      span {
         color: $main-color;
       }
     }

@@ -124,4 +124,6 @@
     ),
         false
     ); ?>
+
+    <?php $APPLICATION->IncludeComponent("bitrix:breadcrumb", "main", Array(), false); ?>
 </div>
