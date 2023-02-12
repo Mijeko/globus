@@ -125,5 +125,7 @@
         false
     ); ?>
 
-    <?php $APPLICATION->IncludeComponent("bitrix:breadcrumb", "main", Array(), false); ?>
+    <?php if (canShowBread()): ?>
+        <?php $APPLICATION->IncludeComponent("bitrix:breadcrumb", "main", Array(), false); ?>
+    <?php endif; ?>
 </div>

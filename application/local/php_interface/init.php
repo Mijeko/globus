@@ -46,3 +46,13 @@ function canShowPageContainer()
 
     return true;
 }
+
+function canShowBread()
+{
+    global $APPLICATION;
+    if ($APPLICATION->GetCurDir() == '/') {
+        return false;
+    }
+
+    return true;
+}
