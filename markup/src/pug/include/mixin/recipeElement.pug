@@ -1,0 +1,14 @@
+mixin recipeElement(item)
+    .recipes-group
+        .recipes-category-title=item.categoryName
+        .recipes-list
+            each rec,index in item.items
+                .recipes-item
+                    .recipes-item-title(data-toggle="collapse" data-target="#collapseExample")=rec.name
+                    #collapseExample.collapse.recipes-item-content
+                        .recipes-item-ingredients
+                            each ingredient,index in rec.ingredients
+                                .recipes-item-ingredient=ingredient
+                        ol.recipes-item-steps
+                            each step,index in rec.steps
+                                li.recipes-item-step=step

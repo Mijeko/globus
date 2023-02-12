@@ -1,0 +1,86 @@
+.recipes {
+  &-category-title {
+    color: $main-color;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &-list {
+  }
+
+  &-group {
+    margin-bottom: 40px;
+  }
+
+  &-item {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px $block-normal-color solid;
+
+    &-title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 0 20px;
+
+      &[aria-expanded="true"] {
+        color: $main-color;
+      }
+    }
+
+    &-content {
+      padding: 10px 20px;
+    }
+
+    &-ingredients {
+      margin: 20px 0;
+      padding: 10px 86px;
+      background-color: rgba(208, 250, 206, 0.3);
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-height: 170px;
+      width: auto;
+      border-radius: 10px;
+    }
+
+    &-ingredient {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 35px;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        display: block;
+        background-image: url("/assets/images/pot.svg");
+        background-size: 100% 100%;
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &-steps {
+      padding: 0;
+      margin: 0 0 0 20px;
+    }
+
+    &-step {
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
